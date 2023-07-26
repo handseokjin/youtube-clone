@@ -1,0 +1,61 @@
+.detail {
+    position: fixed;
+    top: 55px;
+    object-fit: contain;
+    height: 448px;
+    width: 100%;
+    display: flex;
+    padding: 30px;
+}
+
+.backgroundContainer {
+    background-color: rgba( 255, 255, 255, 0.7 );
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    height: 508px;
+}
+
+.posterContainer {
+    z-index: 100;
+}
+
+.poster {
+    max-height: 448px;
+    border-radius: 20px;
+}
+
+.movieInfo {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 60px;
+    z-index: 100;
+}
+
+.detailTitle {
+    font-weight: 700;
+    font-size: 35px;
+    color: rgb(0,0,0);
+    margin-bottom: 15px;
+}
+
+.tagline {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(0,0,0);
+    margin-bottom: 20px;
+}
+
+.detailReleaseDate
+.detailRuntime
+.detailVoteAverage {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(0,0,0);
+}
+
+.movieDetailInfo {
+    margin-bottom: 20px;
+}

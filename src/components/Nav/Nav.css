@@ -1,0 +1,135 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #212121FF;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+}
+
+.hamburgerMenu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.youtubeLogo {
+    height: 70px;
+    cursor: pointer;
+}
+
+.middleSection {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+}
+
+.searchBar {
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #4D4D4D;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #121212;
+    flex: 1;
+    color: white;
+}
+
+.searchBar::placeholder {
+    font-size: 16px;
+}
+
+.searchButton {
+    height: 40px;
+    width: 66px;
+    background-color: #323232;
+    border: 1px solid #4D4D4D;
+    margin-left: -1px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.searchIcon {
+    height: 25px;
+}
+
+.voiceSearchButton {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #121212;
+    cursor: pointer;
+}
+
+.voiceSearchIcon {
+    height: 24px;
+}
+
+.rightSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 135px;
+    margin-right: 20px;
+}
+
+.uploadIcon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.notificationIcon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.userProfile {
+    height: 32px;
+    border-radius: 16px;
+    background-color: red;
+}
+
+.searchButton,
+.voiceSearchButton,
+.uploadIconContainer,
+.notificationIconContainer {
+    position: relative;
+}
+
+.searchButton .tooltip,
+.voiceSearchButton .tooltip,
+.uploadIconContainer .tooltip,
+.notificationIconContainer .tooltip {
+    position: absolute;
+    bottom: -30px;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.searchButton:hover .tooltip,
+.voiceSearchButton:hover .tooltip,
+.uploadIconContainer:hover .tooltip,
+.notificationIconContainer:hover .tooltip {
+    opacity: 1;
+}
+

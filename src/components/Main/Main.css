@@ -1,0 +1,103 @@
+.grid {
+    margin-left: 72px;
+    margin-top: 55px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+}
+
+.genreGrid {
+    display: flex;
+    position: sticky;
+    top: 55px;
+    padding: 15px 0;
+    background: #111;
+}
+
+.genre {
+    color: rgb(241, 241, 241);
+    background-color: #3F3F3F;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color, 0.5s;
+}
+
+.genre:hover {
+    background-color: gray;
+}
+
+.videoGrid {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media(max-width:750px) {
+    .videoGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:751px) and (max-width:999px) {
+    .videoGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(min-width:1000px) {
+    .videoGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.video {
+    cursor: pointer;
+    transition: transform 450ms;
+}
+
+.video:hover{
+    transform: scale(1.08);
+}
+
+.thumbnail {
+    margin-bottom: 8px;
+}
+
+.thumbnailImage {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.videoInfo {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.channelPicture {
+    width: 36px;
+    border-radius: 50px;
+}
+
+.title {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.releaseDate {
+    font-size: 12px;
+    color: #AAAAAA;
+}
+
+.rating {
+    font-size: 12px;
+    color: #AAAAAA;
+}
