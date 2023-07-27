@@ -1,7 +1,20 @@
-import React from 'react';
-import './Nav.css';
+import React, { useState } from "react";
+import "./Nav.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Nav() {
+  const navigate = useNavigate();
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearchValueChange = (e) => {
+    console.log(e.target.value);
+    setSearchValue(e.target.value);
+  }
+
+  const navigateSearchPage = () => {
+    navigate(`/search?q=${searchValue}`);
+  }
+
   return (
     <header className="header">
       <div className="leftSection">
@@ -15,12 +28,18 @@ export default function Nav() {
           className="youtubeLogo"
           src={require("../../assets/icons/youtube-logo.svg").default}
           alt="Youtube Logo"
+          onClick={() => (window.location.href = "/")}
         />
       </div>
       <div className="middleSection">
-        <input className="searchBar" type="text" placeholder="검색" />
+        <input
+          className="searchBar"
+          type="text"
+          placeholder="검색"
+          onChange={handleSearchValueChange}
+        />
 
-        <button className="searchButton">
+        <button className="searchButton" onClick={navigateSearchPage}>
           <img
             className="searchIcon"
             src={require("../../assets/icons/search.svg").default}

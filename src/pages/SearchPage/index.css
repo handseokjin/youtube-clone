@@ -1,0 +1,62 @@
+.searchContainer {
+    position: fixed;
+    overflow: auto;
+    top: 55px;
+    right: 0;
+    bottom: 0;
+    left: 72px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    background-color: #121212;   
+}
+
+.searchMovie {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.searchMovie:hover {
+    cursor: pointer;
+}
+
+.searchPoster {
+    width: 380px;
+    height: 230px;
+    border-radius: 12px;
+}
+
+.searchMovieInfo {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.searchMovieTitle {
+    color: rgb(241, 241, 241);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.searchMovieReleaseDate, .searchMovieVoteAverage, .movieAlarmer {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(170, 170, 170);
+}
+
+.searchMovieUploaderInfo {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.searchMovieUploader {
+    width: 30px;
+    border-radius: 50px;
+    margin-right: 10px;
+}

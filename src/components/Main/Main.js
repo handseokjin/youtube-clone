@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from '../../api/axios';
 import requests from '../../api/request';
 import './Main.css';
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Main() {
   const [movies, setMovies] = useState([]);

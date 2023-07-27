@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from '../../api/axios';
 import './index.css';
-import Footer from '../../components/Footer/Footer';
 
 export default function DetailPage() {
   const {movieId} = useParams(); // 넘어온 movieId를 받음

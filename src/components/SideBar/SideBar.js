@@ -8,6 +8,7 @@ export default function SideBar() {
         <img
           src={require("../../assets/icons/home.svg").default}
           alt="홈 아이콘"
+          onClick={() => window.location.href='/'}
         />
         <div>홈</div>
       </div>
