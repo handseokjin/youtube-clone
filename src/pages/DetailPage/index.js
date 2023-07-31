@@ -49,7 +49,8 @@ export default function DetailPage() {
           <span className="detailVoteAverage">평점 : {movie.vote_average}</span>
         </p>
         <h2>개요</h2>
-        <p className="overview">{movie.overview}</p>
+        <p className="overview">{movie.overview?.length > 450 
+                                  ? movie.overview.substr(0, 450) + "..." : movie.overview}</p>
       </div>
       <div className='backgroundContainer'>
 

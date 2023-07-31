@@ -7,22 +7,26 @@ import { useNavigate } from "react-router-dom";
 export default function Main() {
   const [movies, setMovies] = useState([]);
   const navigate = useNavigate();
+  const [selectedId, setSelectedId] = useState(requests[0].id);
 
   useEffect(() => {
-    fetchMovieData(requests[0].url);
+    fetchMovieData(requests[0].url, requests[0].id);
   }, []);
 
-  const fetchMovieData = async (fetchUrl) => {
-    const request = await axios.get(fetchUrl);
-    console.log(request.data.results);
-    setMovies(request.data.results);
+  const fetchMovieData = async (fetchUrl, id) => {
+    const result = await axios.get(fetchUrl);
+    setSelectedId(id);
+    console.log(result.data.results);
+    setMovies(result.data.results);
   }
 
   return (
     <div className="grid">
       <div className="genreGrid">
-        {requests.map((request, index) => (
-          <div className="genre" onClick={() => fetchMovieData(request.url)}>
+        {requests.map((request) => (
+          <div 
+            className={`genre ${request.id === selectedId ? 'active' : ''}` }
+            onClick={() => fetchMovieData(request.url, request.id)}>
             {request.name}
           </div>
         ))}

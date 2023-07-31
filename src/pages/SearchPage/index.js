@@ -28,7 +28,7 @@ export default function SearchPage() {
 
   useEffect(() => {
     getSearchMovie();
-  }, [])
+  }, [searchValue])
 
   return (
     <section >

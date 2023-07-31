@@ -6,13 +6,28 @@ export default function Nav() {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState("");
 
+  // 검색어 입력할 때마다 호출
   const handleSearchValueChange = (e) => {
     console.log(e.target.value);
     setSearchValue(e.target.value);
   }
 
+  // 검색 이미지 버튼 클릭 시
   const navigateSearchPage = () => {
-    navigate(`/search?q=${searchValue}`);
+    if(searchValue.length > 0)
+      navigate(`/search?q=${searchValue}`);
+    else
+      alert("검색어를 입력해 주세요.")
+  }
+
+  // 검색 바에서 엔터 클릭 시
+  const handleEnter = (e) => {
+    if(e.key === "Enter") {
+      if(searchValue.length > 0)
+        navigateSearchPage();
+      else
+        alert("검색어를 입력해 주세요.")
+    }
   }
 
   return (
@@ -36,6 +51,7 @@ export default function Nav() {
           className="searchBar"
           type="text"
           placeholder="검색"
+          onKeyDown={handleEnter}
           onChange={handleSearchValueChange}
         />
 
@@ -79,7 +95,7 @@ export default function Nav() {
           <div className="tooltip">알림</div>
         </div>
 
-        <image
+        <img
           className="userProfile"
           src={require("../../assets/images/avatars/avatar-1.png")}
           alt="계정"

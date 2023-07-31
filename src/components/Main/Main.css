@@ -27,6 +27,11 @@
     transition: background-color, 0.5s;
 }
 
+.genre.active {
+    background-color: white;
+    color: black;
+}
+
 .genre:hover {
     background-color: gray;
 }

@@ -58,6 +58,8 @@
     background-color: #323232;
     border: 1px solid #4D4D4D;
     margin-left: -1px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -85,6 +87,7 @@
     align-items: center;
     width: 135px;
     margin-right: 20px;
+    
 }
 
 .uploadIcon {
@@ -98,9 +101,8 @@
 }
 
 .userProfile {
-    height: 32px;
+    height: 24px;
     border-radius: 16px;
-    background-color: red;
 }
 
 .searchButton,
