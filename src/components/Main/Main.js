@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from '../../api/axios';
 import requests from '../../api/request';
 import './Main.css';
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Main() {
   const [movies, setMovies] = useState([]);
   const navigate = useNavigate();
-  const [selectedId, setSelectedId] = useState(requests[0].id);
+  const selectedId = useRef(requests[0].id);
 
   useEffect(() => {
     fetchMovieData(requests[0].url, requests[0].id);
@@ -15,17 +15,19 @@ export default function Main() {
 
   const fetchMovieData = async (fetchUrl, id) => {
     const result = await axios.get(fetchUrl);
-    setSelectedId(id);
+    selectedId.current = id;
     console.log(result.data.results);
     setMovies(result.data.results);
   }
+
+  console.log(selectedId.current);
 
   return (
     <div className="grid">
       <div className="genreGrid">
         {requests.map((request) => (
           <div 
-            className={`genre ${request.id === selectedId ? 'active' : ''}` }
+            className={`genre ${request.id === selectedId.current ? 'active' : ''}` }
             onClick={() => fetchMovieData(request.url, request.id)}>
             {request.name}
           </div>
