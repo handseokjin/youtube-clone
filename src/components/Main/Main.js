@@ -53,10 +53,10 @@ export default function Main() {
               </div>
               <div className="info" onClick={() => navigate(`/${movie.id}`)}>
                 <p className="title">
-                  {movie.title ? movie.title : "정보 없음"}
+                  {movie.title ? movie.title : "제공된 정보 없음"}
                 </p>
                 <p className="releaseDate">
-                  {movie.release_date ? movie.release_date : "정보 없음"}
+                  {movie.release_date ? movie.release_date : "제공된 정보 없음"}
                 </p>
                 <div>
                   <span className="rating">★ {movie.vote_average}</span>
