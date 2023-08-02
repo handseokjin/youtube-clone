@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/youtube-clone/static/css/main.0e93f77f.css",
+    "main.js": "/youtube-clone/static/js/main.6d46eba4.js",
+    "static/media/youtube-logo.svg": "/youtube-clone/static/media/youtube-logo.1a7ed2a86cabe789d1e27e774a532a67.svg",
+    "index.html": "/youtube-clone/index.html",
+    "static/media/notifications.svg": "/youtube-clone/static/media/notifications.608a9ee402a5867cbcd578a2632554a5.svg",
+    "static/media/voice-search-icon.svg": "/youtube-clone/static/media/voice-search-icon.8062d378c718dec6ca00729ebc6f562a.svg",
+    "static/media/search.svg": "/youtube-clone/static/media/search.b9fd6453a37aacad439b2101c643d72f.svg",
+    "static/media/upload.svg": "/youtube-clone/static/media/upload.a9e2f5947408440bf3b01729b367fbe1.svg",
+    "static/media/subscriptions.svg": "/youtube-clone/static/media/subscriptions.18bfc6ed7fafc9c23edaaefc4695bf39.svg",
+    "static/media/library.svg": "/youtube-clone/static/media/library.347313367a70a290b65dad0e8e815a85.svg",
+    "static/media/hamburger-menu.svg": "/youtube-clone/static/media/hamburger-menu.eac45e0d594fe3edf305fb53e874d007.svg",
+    "static/media/home.svg": "/youtube-clone/static/media/home.1a5e9ae32714ed082219d6c46aebe504.svg",
+    "main.0e93f77f.css.map": "/youtube-clone/static/css/main.0e93f77f.css.map",
+    "main.6d46eba4.js.map": "/youtube-clone/static/js/main.6d46eba4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e93f77f.css",
+    "static/js/main.6d46eba4.js"
+  ]
+}
