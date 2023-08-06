@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from '../../api/axios';
+import testAxios from '../../api/testAxios';
 import requests from '../../api/request';
 import './Main.css';
 import { useNavigate } from "react-router-dom";
@@ -20,6 +21,11 @@ export default function Main() {
     setMovies(result.data.results);
   }
 
+  const test = async () => {
+    const result = await testAxios.get('http://localhost:8080/');
+    console.log(result);
+  }
+
   console.log(selectedId.current);
 
   return (
@@ -28,7 +34,9 @@ export default function Main() {
         {requests.map((request) => (
           <div 
             className={`genre ${request.id === selectedId.current ? 'active' : ''}` }
-            onClick={() => fetchMovieData(request.url, request.id)}>
+            // onClick={() => fetchMovieData(request.url, request.id)}
+            onClick={() => test()}
+          >
             {request.name}
           </div>
         ))}

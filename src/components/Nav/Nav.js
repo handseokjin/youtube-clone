@@ -43,7 +43,7 @@ export default function Nav() {
           className="youtubeLogo"
           src={require("../../assets/icons/youtube-logo.svg").default}
           alt="Youtube Logo"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => (window.location.href = "/youtube-clone")}
         />
       </div>
       <div className="middleSection">

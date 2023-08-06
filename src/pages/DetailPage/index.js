@@ -10,6 +10,7 @@ export default function DetailPage() {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(`/movie/${movieId}`);
+      console.log(request);
       console.log(request.data);
       setMovie(request.data);
     }
