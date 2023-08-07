@@ -11,13 +11,15 @@ export default function Main() {
   const selectedId = useRef(requests[0].id);
 
   useEffect(() => {
-    fetchMovieData(requests[0].url, requests[0].id);
+    // fetchMovieData(requests[0].url, requests[0].id);
+    fetchMovieData(requests[0].id);
   }, []);
 
-  const fetchMovieData = async (fetchUrl, id) => {
-    const result = await axios.get(fetchUrl);
+  const fetchMovieData = async (id) => {
+    // const result = await axios.get(fetchUrl);
+    const result = await axios.get(id.toString());
     selectedId.current = id;
-    console.log(result.data.results);
+    //console.log(result.data.results);
     setMovies(result.data.results);
   }
 
@@ -26,7 +28,7 @@ export default function Main() {
     console.log(result);
   }
 
-  console.log(selectedId.current);
+  // console.log(selectedId.current);
 
   return (
     <div className="grid">
@@ -34,8 +36,7 @@ export default function Main() {
         {requests.map((request) => (
           <div 
             className={`genre ${request.id === selectedId.current ? 'active' : ''}` }
-            // onClick={() => fetchMovieData(request.url, request.id)}
-            onClick={() => test()}
+            onClick={() => fetchMovieData(request.id)}
           >
             {request.name}
           </div>
