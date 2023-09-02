@@ -5,7 +5,7 @@
 <br/><br/>
 
 ## 2. 화면 구성
-<img width="841" alt="화면 구조" src="https://github.com/handseokjin/youtube-clone/assets/32458465/e46f9791-d007-400d-982a-ab0a3ef610b3">
+<img width="841" alt="화면 구조" src="https://github.com/handseokjin/youtube-clone/assets/32458465/9faaa4ae-ee69-45a3-ab9a-2b10910d8e57">
 <br/><br/>
 
 ## 3. 기술적 경험
@@ -23,7 +23,7 @@
 <br/><br/>
 
 ## 5. 인프라 구조
-<img width="740" alt="기술스택 구조" src="https://github.com/handseokjin/youtube-clone/assets/32458465/440e1bcd-4e8b-4992-85d4-3dd6c4c0e906">
+<img width="740" alt="기술스택 구조" src="https://github.com/handseokjin/youtube-clone/assets/32458465/ac03903c-bb46-4033-9d1c-e2eb3b4e252f">
 <br/><br/>
 
 ## 6. 회고
